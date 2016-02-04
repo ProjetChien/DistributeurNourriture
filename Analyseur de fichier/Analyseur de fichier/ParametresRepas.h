@@ -1,7 +1,4 @@
 
-#ifndef TEXTPARSER_H
-#define TEXTPARSER_H
-
 #include <iostream>
 #include <fstream>
 
@@ -19,14 +16,14 @@ struct Repas
 	Horaire horaire;
 };
 
-class TextParser
+class ParametresRepas
 {
 
 public:
 
-	TextParser();
-
-	~TextParser();
+	ParametresRepas();
+	
+	~ParametresRepas();
 
 	//Traite un fichier texte pour en extraire les données qu'il contient : nb de repas, Horaires, nb de rations
 	//parametre d'entrée : ifstream(fichier a traiter)
@@ -38,13 +35,11 @@ public:
 	
 	Repas GetTabRepas(int i);
 	
-
 private:
-	char varBidon = ':';
+	char varBidon;
 	int nbrepas;
 	Repas tabRepas[5]; // creation d'un tableau de repas
 	
 };
 
 
-#endif

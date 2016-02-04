@@ -1,15 +1,15 @@
 
-#include "TextParser.h"
+#include "ParametresRepas.h"
 
-TextParser::TextParser()
+ParametresRepas::ParametresRepas()
 {
 }
 
-TextParser::~TextParser()
+ParametresRepas::~ParametresRepas()
 {
 }
 
-bool TextParser::TraitementFichier(ifstream* flux)
+bool ParametresRepas::TraitementFichier(ifstream* flux)
 {
 	if (flux)
 	{
@@ -31,12 +31,12 @@ bool TextParser::TraitementFichier(ifstream* flux)
 	}
 }
 
-int TextParser::GetNbRepas()
+int ParametresRepas::GetNbRepas()
 {
 	return nbrepas;
 }
 
-Repas TextParser::GetTabRepas(int i)
+Repas ParametresRepas::GetTabRepas(int i)
 {
 	return tabRepas[i];
 }

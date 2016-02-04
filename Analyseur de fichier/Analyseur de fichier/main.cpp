@@ -1,17 +1,12 @@
 
-#include "bcm2835.h"
-#include "TextParser.h"
-#define RPI_GPIO_OUT 24 //sortie sur broche 18 (GPIO24)
-
-
-
+#include "ParametresRepas.h"
 
 int main()
 {
 	
 	
 	ifstream* fluxFichier = new ifstream("exemple_fichier_param.txt");
-	TextParser objet;
+	ParametresRepas objet;
 	int nbRepas;
 	Repas tabRep[5];
 	bool test = 0;
@@ -25,6 +20,6 @@ int main()
 		tabRep[i] = objet.GetTabRepas(i); // recupere dans la variable du main les repas contenu dans la classe
 	}
 	
-
+	cout << tabRep[2].horaire.heure << ":" << tabRep[2].horaire.minute << endl;
 }
 
